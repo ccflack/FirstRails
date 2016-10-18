@@ -11,5 +11,14 @@ class WelcomeController < ApplicationController
       @name = 'Human'
     end
   end
-  
+
+  def lorem
+    if params[:id]
+      @style = fillerama if :id == fillerama
+      @style = hipsum if :id == hipsum
+      @style = slipsum if :id == slipsum
+    else
+      
+    end
+  end
 end
