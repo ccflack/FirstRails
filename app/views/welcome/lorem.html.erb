@@ -1,7 +1,5 @@
-<% params[:num].to_i.times do %>
-
+<% @result.output.each do |paragraph| %>
   <p>
-    <%= @output %>
+    <%= paragraph %>
   </p>
-
 <% end %>
