@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  
+
   def index
     @message = 'Welcome, human.'
     render plain: @message
@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
   end
 
   def lorem
+    params[:num] = 1 unless params[:num]
     if params[:id]
       case params[:id]
         when 'slipsum'
